@@ -4,7 +4,7 @@ module.exports = function (environment) {
   const ENV = {
     modulePrefix: 'ember-electron-app',
     environment,
-    rootURL: process.env.EMBER_CLI_ELECTRON ? '' : '/',
+    rootURL: process.env.EMBER_CLI_ELECTRON ? '/' : '/',
     locationType: process.env.EMBER_CLI_ELECTRON ? 'hash' : 'history',
     EmberENV: {
       EXTEND_PROTOTYPES: false,

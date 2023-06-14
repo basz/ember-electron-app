@@ -1,26 +1,21 @@
 {
   "extends": "@tsconfig/ember/tsconfig.json",
   "compilerOptions": {
+    "module": "commonjs",
+    "skipLibCheck": true,
+    "noEmitOnError": false,
+    "resolveJsonModule": true,
 
     // The combination of `baseUrl` with `paths` allows Ember's classic package
     // layout, which is not resolvable with the Node resolution algorithm, to
     // work with TypeScript.
     "baseUrl": ".",
     "paths": {
-      "ember-electron-app/tests/*": [
-        "tests/*"
-      ],
-      "ember-electron-app/*": [
-        "app/*"
-      ],
-      "*": [
-        "types/*"
-      ]
-    }
+      "ember-electron-app/tests/*": ["tests/*"],
+      "ember-electron-app/*": ["app/*"],
+      "*": ["types/*"]
+    },
+    "types": ["jest"]
   },
-  "include": [
-    "app/**/*",
-    "tests/**/*",
-    "types/**/*"
-  ]
+  "include": ["app/**/*", "tests/**/*", "types/**/*", "electron-app/**/*.ts"]
 }
